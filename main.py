@@ -6,10 +6,7 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
 
-#test
 
-
-#test2
 
 
 
