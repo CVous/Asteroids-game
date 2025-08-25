@@ -1,9 +1,15 @@
 import pygame
 from constants import *
+from player import *
+
+
 
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    clock = pygame.time.Clock()
+    dt = 0
+    spawn_player = player(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
 
 
     while True:      
@@ -12,7 +18,15 @@ def main():
                 return
 
         screen.fill("black")
+        spawn_player.draw(screen)
+        spawn_player.update(dt)
+
+        # v put last -- updates to next frame
         pygame.display.flip()
+        
+
+        
+        dt = clock.tick(60) / 1000
 
 
 
